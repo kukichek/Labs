@@ -1,29 +1,24 @@
 #pragma once
+#include"Node.h"
 
-template <typename T> struct node {
-	T element;
-	int times = 1;
-	node<T> *next;
-};
-
-template <typename T> class list {
+template <typename T> class List {
 private:
-	node<T> root;
-	node<T> *lastIt;
+	Node<T> root;
+	Node<T> *lastIt;
 public:
-	list(T value) {
+	List(T value) {
 		root.element = value;
 		root.next = NULL;
 		lastIt = &root;
 	}
 	void push(T value) {
-		node<T> *lastNode = new node<T>;
+		Node<T> *lastNode = new Node<T>;
 		lastIt->next = lastNode;
 		lastNode->element = value;
 		lastNode->next = NULL;
 		lastIt = lastNode;
 	}
-	node<T>* getRoot() {
+	Node<T>* getRoot() {
 		return &root;
 	}
 };

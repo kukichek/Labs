@@ -1,0 +1,4 @@
+The frequency of biiteral combinations is:
+ab : 1
+ba : 1
+bb : 1

@@ -1,0 +1,8 @@
+The frequency of operations in given code is:
+"=": 11
+"*": 12
+"+": 1
+"-": 2
+"==": 1
+"!=": 2
+"<<": 2

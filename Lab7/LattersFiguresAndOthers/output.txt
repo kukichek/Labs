@@ -1,0 +1,3 @@
+A number of letters in the file is 74
+A number of figures in the file is 10
+A number of other simbols in the file is 18

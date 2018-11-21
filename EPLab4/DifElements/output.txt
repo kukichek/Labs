@@ -1,0 +1,1 @@
+A number of different elements of an array is 35

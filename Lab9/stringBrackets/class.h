@@ -116,14 +116,14 @@ public:
 	}
 };
 
-template <class T> class stack {
+template <class T> class Stack {
 private:
 	node<T>* top;
 public:
-	stack() {
+	Stack() {
 		top = NULL;
 	}
-	stack(T value) {
+	Stack(T value) {
 		node<T> *newNode = new node<T>(value);
 		top = newNode;
 	}

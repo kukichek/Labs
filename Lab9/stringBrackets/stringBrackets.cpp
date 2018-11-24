@@ -42,7 +42,7 @@ bool isBracket(char c) {
 	return 0;
 }
 
-void processingOfStack(char c, stack<char> &bracketString) {
+void processingOfStack(char c, Stack<char> &bracketString) {
 	if (!bracketString.isEmpty()) {
 		char lastBracket = bracketString.getLast();
 		if ((abs(lastBracket - c) == 1) || ((abs(lastBracket - c) == 2))) {
@@ -58,7 +58,7 @@ void processingOfStack(char c, stack<char> &bracketString) {
 
 void processingOfString(char c, ifstream &fin) {
 	ofstream fout("output.txt");
-	stack<char> bracketString;
+	Stack<char> bracketString;
 	do {
 		if (isBracket(c)) {
 			processingOfStack(c, bracketString);

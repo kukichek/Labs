@@ -8,6 +8,27 @@
 Необходимо определить число шагов, через которые одна из очередей станет пустой.
 
 Гамезо Валерия, 1 курс, информатика
+
+Test case №1
+	input.txt								output.txt
+	X: 1 2 3 4 5 6 7						One of queues will be empty in 8 steps
+	Y: 4 3 2 1
+
+Test case №2
+	input.txt								output.txt
+											The file is empty
+Test case №3
+	input.txt								output.txt
+	X: 1 2 3 4 5 6 7						One of queues will be empty in 0 steps
+	Y:
+
+Test case №4
+	input.txt								Uncorrect data
+	7
+	1 2 3 4 5 6 7
+	-4
+	1 2 3 4					
+	
 */
 
 #include<iostream>

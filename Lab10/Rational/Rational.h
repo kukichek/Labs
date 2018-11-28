@@ -11,7 +11,7 @@ public:
 	void mult(Rational fIt, Rational sIt);
 	void div(Rational fIt, Rational sIt);
 	bool isEqual(Rational num);
-	bool greater(Rational num);
-	bool less(Rational num);
+	bool isGreater(Rational num);
+	bool isLess(Rational num);
 	void print(std::ostream &cout);
 };

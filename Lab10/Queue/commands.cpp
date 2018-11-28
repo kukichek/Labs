@@ -1,3 +1,4 @@
+#include<iostream>
 #include"commands.h"
 
 int countSteps(Queue<int> &X, Queue<int> &Y, int stepNum) {
@@ -17,29 +18,35 @@ int countSteps(Queue<int> &X, Queue<int> &Y, int stepNum) {
 	}
 }
 
-bool isCor(int n) {
-	return n >= 0;
-}
-
-void readData(std::ifstream &fin) {
-	int n1, n2;
-	Queue<int> X, Y;
-	fin >> n1;
-	if (isCor(n1)) {
+bool pushToStack(std::ifstream &fin, Queue<int> &X) {
+	int n;
+	fin >> n;
+	if (n >= 0) {
 		int temp;
-		for (int i = 0; i < n1; ++i) {
+		for (int i = 0; i < n; ++i) {
 			fin >> temp;
 			X.push(temp);
 		}
+		return 1;
 	}
-	fin >> n2;
-	if (isCor(n2)) {
-		int temp;
-		for (int i = 0; i < n2; ++i) {
-			fin >> temp;
-			Y.push(temp);
-		}
+	else {
+		std::cout << "Uncorrect data\n";
+		return 0;
+	}
+}
+
+void readData(std::ifstream &fin) {
+	Queue<int> X, Y;
+	if (!pushToStack(fin, X)) {
+		return;
+	}
+	if (!pushToStack(fin, Y)) {
+		return;
 	}
 	std::ofstream fout("output.txt");
-	fout << "One of queues will be empty in " << countSteps(X, Y) << " steps\n";
+	if (X.isEmpty() || Y.isEmpty()) {
+		fout << "One of queues will be empty in 0 steps\n";
+	} else {
+		fout << "One of queues will be empty in " << countSteps(X, Y) << " steps\n";
+	}
 }

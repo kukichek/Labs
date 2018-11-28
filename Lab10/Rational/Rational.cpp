@@ -1,3 +1,4 @@
+#include<iostream>
 #include"Rational.h"
 #include"gcd.h"
 
@@ -28,15 +29,19 @@ void Rational::div(Rational fIt, Rational sIt) {
 bool Rational::isEqual(Rational num) {
 	return a * num.b == b * num.a;
 }
-bool Rational::greater(Rational num) {
+bool Rational::isGreater(Rational num) {
 	return a * num.b > b * num.a;
 }
 
-bool Rational::less(Rational num) {
+bool Rational::isLess(Rational num) {
 	return a * num.b < b * num.a;
 }
 
 void Rational::print(std::ostream &cout) {
+	if (b == 0) {
+		cout << "Error, division by zero\n";
+		return;
+	}
 	if (b == 1) {
 		cout << a;
 	} else {

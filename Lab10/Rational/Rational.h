@@ -6,7 +6,11 @@ private:
 	int a, b; // a Ц числитель, b Ц знаменатель
 	void reduce();
 public:
-	Rational(int num = 0, int den = 1) : a(num), b(den) {}
+	Rational(int num = 0, int den = 1) : a(num) {
+		if (den == 0) {
+			b = 1;
+		}
+	}
 	void add(Rational fIt, Rational sIt);
 	void mult(Rational fIt, Rational sIt);
 	void div(Rational fIt, Rational sIt);

@@ -24,8 +24,7 @@ Test case ¹2
 
 Test case ¹3
 	a(2, 3), b(0, 6)						Error, division by zero
-	c.div(a, b)
-	c.print(cout)
+	c.div(a, b)								
 
 Test case ¹4
 	a(2, 3), d(4, 6)						number 2/3 is equal than a number 4/6
@@ -34,6 +33,10 @@ Test case ¹4
 Test case ¹5
 	a(2, 3), e(5, 3)						number 2/3 is less than a number 5/3
 	a.isLess(e)								number 2/3 is not greater than a number 5/3
+
+Test case ¹6
+	a(0, 0), b(0, 0)						Error, division by zero
+	c.div(a, b)
 */
 
 #include<iostream>
@@ -42,7 +45,7 @@ Test case ¹5
 using namespace std;
 
 int main() {
-	Rational a(2, 3), b(2, 6), c;
+	Rational a(2, 3), b(0, 6), c;
 	/*Rational d(4, 6);
 	c.add(a, b);
 	c.print(cout);
@@ -50,13 +53,13 @@ int main() {
 
 	c.mult(a, b);
 	c.print(cout);
-	cout << endl;
+	cout << endl;*/
 
 	c.div(a, b);
 	c.print(cout);
 	cout << endl;
 
-	if (a.isEqual(d)) {
+	/*if (a.isEqual(d)) {
 		cout << "number ";
 		a.print(cout);
 		cout << " is equal than a number ";
@@ -69,7 +72,7 @@ int main() {
 	}
 	cout << endl;*/
 
-	Rational e(5, 3);
+	/*Rational e(5, 3);
 	if (a.isLess(e)) {
 		cout << "number ";
 		a.print(cout);
@@ -95,7 +98,7 @@ int main() {
 		cout << " is not greater than a number ";
 		e.print(cout);
 	}
-	cout << endl;
+	cout << endl;*/
 
 	system("pause");
 

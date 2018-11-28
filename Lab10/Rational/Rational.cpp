@@ -23,7 +23,12 @@ void Rational::mult(Rational fIt, Rational sIt) {
 void Rational::div(Rational fIt, Rational sIt) {
 	a = fIt.a * sIt.b;
 	b = fIt.b * sIt.a;
-	reduce();
+	if (b == 0) {
+		std::cout << "Error, division by zero\n";
+	} else {
+		reduce();
+	}
+	
 }
 
 bool Rational::isEqual(Rational num) {

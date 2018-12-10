@@ -277,3 +277,4 @@ ASALocalRun/
 *.sln
 *.vcxproj
 *.filters
+*.cd
